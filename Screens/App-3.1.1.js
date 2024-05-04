@@ -10,11 +10,9 @@ const App_3_1_1 = ({navigation}) => {
   };
 
   const handleNextPress = () => {
-    /*
     if (selectedOption == "yes") {
-      navigation.navigate("Feeling_Congested");
+      navigation.navigate("FeelingCongested");
     }
-    */
 
     if (selectedOption == "no") {
       navigation.navigate("App_3_1_1_1");

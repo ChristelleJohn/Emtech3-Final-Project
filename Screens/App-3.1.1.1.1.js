@@ -10,15 +10,13 @@ const App_3_1_1_1_1 = ({navigation}) => {
   };
 
   const handleNextPress = () => {
-    /*
     if (selectedOption == "yes") {
-      navigation.navigate("Feeling_Stressed");
+      navigation.navigate("FeelingStressed");
     }
-
+    
     if (selectedOption == "no") {
-      navigation.navigate("Feeling_Dehydrated");
+      navigation.navigate("FeelingDehydrated");
     }
-    */
   };
 
   return (

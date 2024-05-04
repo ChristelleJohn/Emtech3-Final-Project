@@ -11,14 +11,13 @@ const App_1 = ({navigation}) => {
 
   const handleNextPress = () => {
     if (selectedOption == "yes") {
-      navigation.navigate("App_1_1");
+      navigation.navigate("FeelingCongested");
     }
 
-    /*
+    
     if (selectedOption == "no") {
-      navigation.navigate("App_1_2");
+      navigation.navigate("FeelingStressed");
     }
-    */
 
   };
 

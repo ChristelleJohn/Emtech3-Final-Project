@@ -5,7 +5,6 @@ import { useFonts } from "expo-font";
 import AppWelcome from "./Screens/AppWelcome";
 import AppStart from "./Screens/App-Start";
 import App_1 from "./Screens/App-1";
-import App_1_1 from "./Screens/App-1.1"; 
 import App_2 from "./Screens/App-2"; 
 import App_2_1 from "./Screens/App-2.1";
 import App_2_1_1 from "./Screens/App-2.1.1";
@@ -21,6 +20,11 @@ import App_3_1_1_1_1 from "./Screens/App-3.1.1.1.1";
 import App_3_1_2 from "./Screens/App-3.1.2";
 import App_3_2 from "./Screens/App-3.2";
 import App_3_2_1 from "./Screens/App-3.2.1";
+import FeelingCongested from "./Screens/FeelingCongested";
+import FeelingStressed from "./Screens/FeelingStressedandTired";
+import FeelingDehydrated from "./Screens/FeelingDehydrated";
+import FeelingSuperDry from "./Screens/FeelingSuperDry";
+import FeelingReallyGreat from "./Screens/FeelingReallyGreat";
 
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
@@ -31,6 +35,7 @@ const App = () => {
     "JuliusSansOne-Regular": require("./assets/fonts/JuliusSansOne-Regular.ttf"),
     "Inter-Regular": require("./assets/fonts/Inter-Regular.ttf"),
     "Inter-Bold": require("./assets/fonts/Inter-Bold.ttf"),
+    "Manuale-Bold": require("./assets/fonts/Manuale-Bold.ttf"),
   });
 
   if (!fontsLoaded && !error) {
@@ -55,11 +60,6 @@ const App = () => {
             <Stack.Screen
               name="App_1"
               component={App_1}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="App_1_1"
-              component={App_1_1}
               options={{ headerShown: false }}
             />
             <Stack.Screen
@@ -136,6 +136,36 @@ const App = () => {
             <Stack.Screen
               name="App_3_2_1"
               component={App_3_2_1}
+              opt
+              ions={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="FeelingCongested"
+              component={FeelingCongested}
+              opt
+              ions={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="FeelingStressed"
+              component={FeelingStressed}
+              opt
+              ions={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="FeelingDehydrated"
+              component={FeelingDehydrated}
+              opt
+              ions={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="FeelingSuperDry"
+              component={FeelingSuperDry}
+              opt
+              ions={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="FeelingReallyGreat"
+              component={FeelingReallyGreat}
               opt
               ions={{ headerShown: false }}
             />

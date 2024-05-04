@@ -10,23 +10,19 @@ const App_2_1_1 = ({navigation}) => {
   };
 
   const handleNextPress = () => {
-    /*
     if (selectedOption == "yes") {
-      navigation.navigate("Feeling_Dehydrated");
+      navigation.navigate("FeelingDehydrated");
     }
-
     if (selectedOption == "no") {
-      navigation.navigate("Feeling_SuperDry");
+      navigation.navigate("FeelingSuperDry");
     }
-    */
-
   };
 
   return (
     <View style={styles.container}>
       <View style={styles.headingContainer}>
         <Text style={styles.headingText}>
-          Does you have chapped lips?
+          Do you have chapped lips?
         </Text>
       </View>
       <View style={styles.buttonsContainer}>

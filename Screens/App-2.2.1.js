@@ -13,13 +13,10 @@ const App_2_2_1 = ({navigation}) => {
     if (selectedOption == "yes") {
       navigation.navigate("App_2_2_1_1");
     }
-    /*
 
     if (selectedOption == "no") { 
-      navigation.navigate("Feeling_Dehydrated");
+      navigation.navigate("FeelingDehydrated");
     }
-    */
-
   };
 
   return (

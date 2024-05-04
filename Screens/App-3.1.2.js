@@ -14,11 +14,11 @@ const App_3_1_2 = ({navigation}) => {
     if (selectedOption == "yes") {
       navigation.navigate("Modal");
     }
+    */
 
     if (selectedOption == "no") {
-      navigation.navigate("Feeling_Stressed");
+      navigation.navigate("FeelingStressed");
     }
-    */
   };
 
   return (
