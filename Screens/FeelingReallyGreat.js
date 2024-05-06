@@ -1,14 +1,13 @@
 import * as React from "react";
 import { Text, StyleSheet, View, Pressable } from "react-native";
 import { FontFamily, Color, FontSize } from "../GlobalStyles";
+import App_3_1_1_1 from "../Screens/App-3.1.1.1";
 
-
-const FeelingReallyGreat  = () => {
-  /*
-  const handlePress = (navigation) => {
-    navigation.navigate("Recommendation");
+const FeelingReallyGreat  = ({ navigation, route }) => {
+  const { name, dateRegistered } = route.params || {};
+  const handlePress = () => {
+    navigation.navigate("RecomReallyGreat");
   };
-  */
 
   return (
     <View style={styles.container}>

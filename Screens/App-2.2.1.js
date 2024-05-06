@@ -1,8 +1,10 @@
 import * as React from "react";
 import { Text, StyleSheet, View, Pressable, Image } from "react-native";
 import { Color, Border, FontFamily, FontSize } from "../GlobalStyles";
+import App_2_2 from "../Screens/App-2.2";
 
-const App_2_2_1 = ({navigation}) => {
+const App_2_2_1 = ({ navigation, route }) => {
+  const { name, dateRegistered } = route.params || {};
   const [selectedOption, setSelectedOption] = React.useState(null);
 
   const handleOptionSelect = (option) => {
@@ -11,11 +13,11 @@ const App_2_2_1 = ({navigation}) => {
 
   const handleNextPress = () => {
     if (selectedOption == "yes") {
-      navigation.navigate("App_2_2_1_1");
+      navigation.navigate("FeelingDehydrated", { name, dateRegistered });
     }
-
-    if (selectedOption == "no") { 
-      navigation.navigate("FeelingDehydrated");
+    
+    if (selectedOption == "no") {
+      navigation.navigate("FeelingSuperDry", { name, dateRegistered });
     }
   };
 
@@ -23,7 +25,7 @@ const App_2_2_1 = ({navigation}) => {
     <View style={styles.container}>
       <View style={styles.headingContainer}>
         <Text style={styles.headingText}>
-          Have you been drinking 2L of water a day?
+          Have you consumed a few too many alcohol this week?
         </Text>
       </View>
       <View style={styles.buttonsContainer}>

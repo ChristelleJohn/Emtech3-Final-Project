@@ -1,8 +1,10 @@
 import * as React from "react";
 import { Text, StyleSheet, View, Pressable, Image } from "react-native";
 import { Color, Border, FontFamily, FontSize } from "../GlobalStyles";
+import App_3_1 from "../Screens/App-3.1"; 
 
-const App_3_1_2 = ({navigation}) => {
+const App_3_1_2 = ({ navigation, route }) => {
+  const { name, dateRegistered } = route.params || {};
   const [selectedOption, setSelectedOption] = React.useState(null);
 
   const handleOptionSelect = (option) => {
@@ -10,14 +12,11 @@ const App_3_1_2 = ({navigation}) => {
   };
 
   const handleNextPress = () => {
-    /*
     if (selectedOption == "yes") {
-      navigation.navigate("Modal");
+      navigation.navigate("FeelingIrritated", { name, dateRegistered });
     }
-    */
-
     if (selectedOption == "no") {
-      navigation.navigate("FeelingStressed");
+      navigation.navigate("FeelingStressed", { name, dateRegistered });
     }
   };
 
@@ -25,7 +24,7 @@ const App_3_1_2 = ({navigation}) => {
     <View style={styles.container}>
       <View style={styles.headingContainer}>
         <Text style={styles.headingText}>
-          Does your pores look larger than normal?
+          Has your skin color change?
         </Text>
       </View>
       <View style={styles.buttonsContainer}>

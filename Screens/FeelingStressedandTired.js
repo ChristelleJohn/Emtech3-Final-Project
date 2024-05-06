@@ -1,14 +1,16 @@
 import * as React from "react";
 import { Text, StyleSheet, View, Pressable } from "react-native";
 import { FontFamily, Color, FontSize } from "../GlobalStyles";
+import App_1 from "../Screens/App-1";
+import App_3_1_1_1_1 from "../Screens/App-3.1.1.1.1";
+import App_3_1_2 from "../Screens/App-3.1.2";
 
 
-const FeelingStressed  = () => {
-  /*
-  const handlePress = (navigation) => {
-    navigation.navigate("Recommendation");
+const FeelingStressed  = ({ navigation, route }) => {
+  const { name, dateRegistered } = route.params || {};
+  const handlePress = () => {
+    navigation.navigate("RecomStressedTired");
   };
-  */
 
   return (
     <View style={styles.container}>

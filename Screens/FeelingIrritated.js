@@ -1,13 +1,14 @@
 import * as React from "react";
 import { Text, StyleSheet, View, Pressable } from "react-native";
 import { FontFamily, Color, FontSize } from "../GlobalStyles";
+import App_3_1_2 from "../Screens/App-3.1.2";
 
-const FeelingIrritated = ({navigation}) => {
-  /*
-  const handlePress = (navigation) => {
-    navigation.navigate("Recommendation");
+const FeelingIrritated = ({ navigation, route }) => {
+  const { name, dateRegistered } = route.params || {};
+  const handlePress = () => {
+    navigation.navigate("RecomIrritated");
   };
-  */
+
   return (
     <View style={styles.container}>
       <View style={styles.headingContainer}>

@@ -1,8 +1,10 @@
 import * as React from "react";
 import { Text, StyleSheet, View, Pressable, Image } from "react-native";
 import { Color, Border, FontFamily, FontSize } from "../GlobalStyles";
+import App_2_1 from "../Screens/App-2.1";
 
-const App_2_1_2 = ({navigation}) => {
+const App_2_1_2 = ({ navigation, route }) => {
+  const { name, dateRegistered } = route.params || {};
   const [selectedOption, setSelectedOption] = React.useState(null);
 
   const handleOptionSelect = (option) => {
@@ -11,11 +13,11 @@ const App_2_1_2 = ({navigation}) => {
 
   const handleNextPress = () => {
     if (selectedOption == "yes") {
-      navigation.navigate("FeelingDehydrated");
+      navigation.navigate("FeelingDehydrated", { name, dateRegistered });
     }
 
     if (selectedOption == "no") {
-      navigation.navigate("App_2_1_1");
+      navigation.navigate("App_2_1_1", { name, dateRegistered });
     }
   };
 

@@ -1,9 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, Button, ImageBackground, StatusBar, Alert } from 'react-native';
+import { View, Text, StyleSheet, Button, Image, ImageBackground, StatusBar, Alert, TouchableOpacity } from 'react-native';
 import { FontFamily } from "../GlobalStyles";
 import * as Location from 'expo-location';
+import homeIcon from '../Icons/home.png';
+import listIcon from '../Icons/list.png';
+import settingsIcon from '../Icons/settings.png';
+import RecomCongested from "../Screens/RecomCongested";
+import RecomDehydrated from "../Screens/RecomDehydrated";
+import RecomHormonal from "../Screens/RecomHormonal";
+import RecomIrritated from "../Screens/RecomIrritated";
+import RecomReallyGreat from "../Screens/RecomReallyGreat";
+import RecomStressedTired from "../Screens/RecomStressedTired";
+import RecomSuperDry from "../Screens/RecomSuperDry";
 
-const AppHome = ({ navigation }) => {
+
+const AppHome = ({ navigation, route }) => {
+  const { name, dateRegistered } = route.params || {};
   StatusBar.setBarStyle('light-content');
   StatusBar.setTranslucent(true);
   StatusBar.setBackgroundColor('transparent');
@@ -103,7 +115,7 @@ const AppHome = ({ navigation }) => {
       [
         {
           text: "OK",
-          onPress: () => navigation.navigate("AppStart")
+          onPress: () => navigation.navigate("AppStart", { name, dateRegistered })
         }
       ]
     );
@@ -113,7 +125,7 @@ const AppHome = ({ navigation }) => {
     <ImageBackground source={getImageSource()} style={styles.container}>
       <View style={styles.container}>
         {/* Top Nav Bar */}
-        <View style={styles.navbar}>
+        <View style={styles.navbar1}>
           <View style={styles.dateloc}>
             <Text style={styles.navText}>{currentDate}</Text>
             <Text style={styles.city}>{currentCity}</Text>
@@ -135,6 +147,18 @@ const AppHome = ({ navigation }) => {
           <Text style={styles.weatherText}>Weather Status: {weatherCondition.toUpperCase()}</Text>
           <Text style={styles.weatherText}>Humidity: {humidity}%</Text>
         </View>
+        
+        <View style={styles.navbar2}>
+        <TouchableOpacity style={styles.navbarItem} onPress={() => navigation.navigate('List', { name, dateRegistered })}>
+          <Image source={listIcon} style={styles.icon} />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.navbarItem} >
+          <Image source={homeIcon} style={styles.icon} />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.navbarItem} onPress={() => navigation.navigate('Settings', { name, dateRegistered })}>
+          <Image source={settingsIcon} style={styles.icon} />
+        </TouchableOpacity>
+      </View>
       </View>
     </ImageBackground>
   );
@@ -145,7 +169,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'transparent',
   },
-  navbar: {
+  navbar1: {
     marginTop: 30,
     paddingTop: 30,
     width: "auto",
@@ -201,7 +225,22 @@ const styles = StyleSheet.create({
   },
   dateloc: {
     flexDirection: "column",
-  }
+  },
+  navbar2: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    borderTopWidth: 1,
+    borderColor: '#ccc',
+  },
+  navbarItem: {
+    padding: 15,
+  },
+  icon: {
+    width: 24,
+    height: 24,
+    tintColor: 'white',
+  },
 });
 
 export default AppHome;

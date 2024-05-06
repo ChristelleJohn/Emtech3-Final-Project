@@ -19,7 +19,7 @@ const AppChoice = ({ navigation, route }) => {
         </Pressable>
         <Pressable
           style={[styles.button, styles.alreadyKnowButton]}
-          onPress={() => navigation.navigate('Result1', { name, dateRegistered })}
+          onPress={() => navigation.navigate('AppHome', { name, dateRegistered })}
         >
           <Text style={styles.buttonText}>Already Know Yours?</Text>
         </Pressable>

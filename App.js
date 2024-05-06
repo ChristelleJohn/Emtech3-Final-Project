@@ -14,7 +14,6 @@ import App_2_1_1 from "./Screens/App-2.1.1";
 import App_2_1_2 from "./Screens/App-2.1.2";
 import App_2_2 from "./Screens/App-2.2";
 import App_2_2_1 from "./Screens/App-2.2.1";
-import App_2_2_1_1 from "./Screens/App-2.2.1.1";
 import App_3 from "./Screens/App-3"; 
 import App_3_1 from "./Screens/App-3.1";
 import App_3_1_1 from "./Screens/App-3.1.1";
@@ -24,12 +23,21 @@ import App_3_1_2 from "./Screens/App-3.1.2";
 import App_3_2 from "./Screens/App-3.2";
 import App_3_2_1 from "./Screens/App-3.2.1";
 import FeelingCongested from "./Screens/FeelingCongested";
-import FeelingStressed from "./Screens/FeelingStressedandTired";
 import FeelingDehydrated from "./Screens/FeelingDehydrated";
-import FeelingSuperDry from "./Screens/FeelingSuperDry";
+import FeelingHormonal from "./Screens/FeelingIrritated";
+import FeelingIrritated from "./Screens/FeelingHormonal";
 import FeelingReallyGreat from "./Screens/FeelingReallyGreat";
-import Result1 from "./Screens/Result1";
+import FeelingStressed from "./Screens/FeelingStressedandTired";
+import FeelingSuperDry from "./Screens/FeelingSuperDry";
 import Settings from "./Screens/Settings";
+import RecomCongested from "./Screens/RecomCongested";
+import RecomDehydrated from "./Screens/RecomDehydrated";
+import RecomHormonal from "./Screens/RecomHormonal";
+import RecomIrritated from "./Screens/RecomIrritated";
+import RecomReallyGreat from "./Screens/RecomReallyGreat";
+import RecomStressedTired from "./Screens/RecomStressedTired";
+import RecomSuperDry from "./Screens/RecomSuperDry";
+
 
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
@@ -114,11 +122,6 @@ const App = () => {
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="App_2_2_1_1"
-              component={App_2_2_1_1}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
               name="App_3"
               component={App_3}
               options={{ headerShown: false }}
@@ -164,18 +167,18 @@ const App = () => {
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="FeelingStressed"
-              component={FeelingStressed}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
               name="FeelingDehydrated"
               component={FeelingDehydrated}
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="FeelingSuperDry"
-              component={FeelingSuperDry}
+              name="FeelingHormonal"
+              component={FeelingHormonal}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="FeelingIrritated"
+              component={FeelingIrritated}
               options={{ headerShown: false }}
             />
             <Stack.Screen
@@ -184,8 +187,48 @@ const App = () => {
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="Result1"
-              component={Result1}
+              name="FeelingStressed"
+              component={FeelingStressed}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="FeelingSuperDry"
+              component={FeelingSuperDry}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="RecomCongested"
+              component={RecomCongested}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="RecomDehydrated"
+              component={RecomDehydrated}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="RecomHormonal"
+              component={RecomHormonal}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="RecomIrritated"
+              component={RecomIrritated}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="RecomReallyGreat"
+              component={RecomReallyGreat}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="RecomStressedTired"
+              component={RecomStressedTired}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="RecomSuperDry"
+              component={RecomSuperDry}
               options={{ headerShown: false }}
             />
             <Stack.Screen

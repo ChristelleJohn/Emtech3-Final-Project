@@ -53,6 +53,9 @@ const Settings = ({route}) => {
           Thank you for your cooperation.
         </Text>
       </View>
+      <View style={[styles.Version, textStyle]}>
+        <Text style={[styles.aboutusHeading, textStyle]}>Version 0.1</Text>
+      </View>
     </View>
   );
 };
@@ -70,7 +73,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#121212',
   },
   userContainer: {
-    flex: 2,
+    flex: 1,
     paddingTop: 70,
     alignItems: 'center',
   },
@@ -104,7 +107,7 @@ const styles = StyleSheet.create({
     fontFamily: FontFamily.interRegular,
   },
   aboutusContainer: {
-    flex: 3,
+    flex: 2,
     alignItems: 'center',
   },
   aboutusHeading: {
@@ -124,6 +127,11 @@ const styles = StyleSheet.create({
   darkText: {
     color: '#fff',
   },
+  Version: {
+    flex: 1,
+    fontSize: 14,
+    fontFamily: FontFamily.interRegular,
+  }
 });
 
 export default Settings;
