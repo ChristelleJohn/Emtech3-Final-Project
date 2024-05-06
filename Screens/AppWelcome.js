@@ -10,21 +10,14 @@ const AppWelcome = ({navigation}) => {
         <Text style={styles.textHeadings}
           >{`Know your skin type and the best
                 skin care routine`}</Text>
+      </View>
+      <View style={styles.buttonContainer}>
         <Pressable
           style={[styles.button1, styles.shadowProp]}
-          onPress={() => navigation.navigate("AppStart")}
+          onPress={() => navigation.navigate("AppUser")}
         >
           <Text style={styles.button1Text}>
             Get Started!
-          </Text>
-        </Pressable>
-      </View>
-      <View style={styles.button2}>
-        <Pressable
-          onPress={() => {}}
-        >
-          <Text style={styles.button2Text}>
-          Already know yours?
           </Text>
         </Pressable>
       </View>
@@ -39,7 +32,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   mainContainer: {
-    flex: 4,
+    flex: 5,
     alignContent: "center",
     alignItems: "center",
     justifyContent: "center",
@@ -50,16 +43,21 @@ const styles = StyleSheet.create({
     color: "#0e194d",
   },
   textHeadings: {
+    marginTop: 10,
     fontFamily: FontFamily.interRegular,
     justifyContent: "center",
     color: Color.colorSlategray,
     fontSize: FontSize.size_mini, 
   },
+  buttonContainer: {
+    flex: 3,
+    alignItems: "center",
+    justifyContent: "center",
+  },
   button1: {
     borderRadius: 70,
     backgroundColor: "#e1705d",
     width: "100%",
-    marginTop: 50,
     paddingHorizontal: 120,
     paddingVertical: 13,
     overflow: "hidden",
@@ -69,16 +67,6 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     fontSize: 18,
     color: Color.colorWhite,
-  },
-  button2: {
-    flex: 1, 
-    justifyContent: "center",
-    alignContent: "center",
-  },
-  button2Text: {
-    fontFamily: FontFamily.interBold,
-    fontWeight: "700",
-    color: Color.colorSlategray,
   },
   shadowProp: {
     shadowColor: '#171717',

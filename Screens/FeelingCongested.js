@@ -3,11 +3,10 @@ import { Text, StyleSheet, View, Pressable } from "react-native";
 import { FontFamily, Color, FontSize } from "../GlobalStyles";
 
 const FeelingCongested = ({navigation}) => {
-  /*
-  const handlePress = (navigation) => {
-    navigation.navigate("Recommendation");
+  const handlePress = () => {
+    navigation.navigate("Result1");
   };
-  */
+
   return (
     <View style={styles.container}>
       <View style={styles.headingContainer}>

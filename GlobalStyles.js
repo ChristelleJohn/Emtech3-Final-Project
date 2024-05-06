@@ -4,6 +4,7 @@ export const FontFamily = {
   interRegular: "Inter-Regular",
   juliusSansOneRegular: "JuliusSansOne-Regular",
   manualeBold: "Manuale-Bold",
+  lobsterRegular: "Lobster-Regular",
 };
 /* font sizes */
 export const FontSize = {

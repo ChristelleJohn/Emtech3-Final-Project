@@ -3,6 +3,9 @@ import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { useFonts } from "expo-font";
 import AppWelcome from "./Screens/AppWelcome";
+import AppUser from "./Screens/AppUser";
+import AppChoice from "./Screens/AppChoice";
+import AppHome from "./Screens/AppHome";
 import AppStart from "./Screens/App-Start";
 import App_1 from "./Screens/App-1";
 import App_2 from "./Screens/App-2"; 
@@ -25,6 +28,8 @@ import FeelingStressed from "./Screens/FeelingStressedandTired";
 import FeelingDehydrated from "./Screens/FeelingDehydrated";
 import FeelingSuperDry from "./Screens/FeelingSuperDry";
 import FeelingReallyGreat from "./Screens/FeelingReallyGreat";
+import Result1 from "./Screens/Result1";
+import Settings from "./Screens/Settings";
 
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
@@ -36,6 +41,7 @@ const App = () => {
     "Inter-Regular": require("./assets/fonts/Inter-Regular.ttf"),
     "Inter-Bold": require("./assets/fonts/Inter-Bold.ttf"),
     "Manuale-Bold": require("./assets/fonts/Manuale-Bold.ttf"),
+    "Lobster-Regular": require("./assets/fonts/Lobster-Regular.ttf"),
   });
 
   if (!fontsLoaded && !error) {
@@ -50,6 +56,21 @@ const App = () => {
             <Stack.Screen
               name="AppWelcome"
               component={AppWelcome}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="AppUser"
+              component={AppUser}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="AppChoice"
+              component={AppChoice}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="AppHome"
+              component={AppHome}
               options={{ headerShown: false }}
             />
             <Stack.Screen
@@ -130,44 +151,47 @@ const App = () => {
             <Stack.Screen
               name="App_3_2"
               component={App_3_2}
-              opt
-              ions={{ headerShown: false }}
+              options={{ headerShown: false }}
             />
             <Stack.Screen
               name="App_3_2_1"
               component={App_3_2_1}
-              opt
-              ions={{ headerShown: false }}
+              options={{ headerShown: false }}
             />
             <Stack.Screen
               name="FeelingCongested"
               component={FeelingCongested}
-              opt
-              ions={{ headerShown: false }}
+              options={{ headerShown: false }}
             />
             <Stack.Screen
               name="FeelingStressed"
               component={FeelingStressed}
-              opt
-              ions={{ headerShown: false }}
+              options={{ headerShown: false }}
             />
             <Stack.Screen
               name="FeelingDehydrated"
               component={FeelingDehydrated}
-              opt
-              ions={{ headerShown: false }}
+              options={{ headerShown: false }}
             />
             <Stack.Screen
               name="FeelingSuperDry"
               component={FeelingSuperDry}
-              opt
-              ions={{ headerShown: false }}
+              options={{ headerShown: false }}
             />
             <Stack.Screen
               name="FeelingReallyGreat"
               component={FeelingReallyGreat}
-              opt
-              ions={{ headerShown: false }}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="Result1"
+              component={Result1}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="Settings"
+              component={Settings}
+              options={{ headerShown: false }}
             />
           </Stack.Navigator>
         ) : null}
