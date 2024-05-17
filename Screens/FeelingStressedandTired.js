@@ -4,12 +4,13 @@ import { FontFamily, Color, FontSize } from "../GlobalStyles";
 import App_1 from "../Screens/App-1";
 import App_3_1_1_1_1 from "../Screens/App-3.1.1.1.1";
 import App_3_1_2 from "../Screens/App-3.1.2";
+import RecommendationsScreen from "../Screens/Recommendations";
 
 
 const FeelingStressed  = ({ navigation, route }) => {
   const { name, dateRegistered } = route.params || {};
   const handlePress = () => {
-    navigation.navigate("RecomStressedTired");
+    navigation.navigate("RecomStressedTired", { name, dateRegistered });
   };
 
   return (

@@ -17,7 +17,7 @@ const App_2_2 = ({ navigation, route }) => {
     }
 
     if (selectedOption == "no") { 
-      navigation.navigate("FeelingDehydrated", { name, dateRegistered });
+      navigation.navigate("Feeling Dehydrated", { name, dateRegistered });
     }
   };
 

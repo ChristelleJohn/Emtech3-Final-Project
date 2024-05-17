@@ -14,7 +14,7 @@ const AppWelcome = ({navigation}) => {
       <View style={styles.buttonContainer}>
         <Pressable
           style={[styles.button1, styles.shadowProp]}
-          onPress={() => navigation.navigate("AppUser")}
+          onPress={() => navigation.navigate("AppChoice")}
         >
           <Text style={styles.button1Text}>
             Get Started!

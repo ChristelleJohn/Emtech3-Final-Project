@@ -2,11 +2,12 @@ import * as React from "react";
 import { Text, StyleSheet, View, Pressable } from "react-native";
 import { FontFamily, Color, FontSize } from "../GlobalStyles";
 import App_3_1_2 from "../Screens/App-3.1.2";
+import RecommendationsScreen from "../Screens/Recommendations";
 
 const FeelingIrritated = ({ navigation, route }) => {
   const { name, dateRegistered } = route.params || {};
   const handlePress = () => {
-    navigation.navigate("RecomIrritated");
+    navigation.navigate("RecomIrritated", { name, dateRegistered });
   };
 
   return (

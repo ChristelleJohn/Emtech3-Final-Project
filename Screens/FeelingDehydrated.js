@@ -6,12 +6,13 @@ import App_2_1_2 from "../Screens/App-2.1.2";
 import App_2_2 from "../Screens/App-2.2";
 import App_2_2_1 from "../Screens/App-2.2.1";
 import App_3_1_1_1_1 from "../Screens/App-3.1.1.1.1";
+import RecommendationsScreen from "../Screens/Recommendations";
 
 
 const FeelingDehydrated  = ({ navigation, route }) => {
   const { name, dateRegistered } = route.params || {};
   const handlePress = () => {
-    navigation.navigate("RecomDehydrated");
+    navigation.navigate("RecomDehydrated", { name, dateRegistered });
   };
 
   return (

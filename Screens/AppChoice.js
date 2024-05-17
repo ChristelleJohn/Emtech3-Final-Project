@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 import { FontFamily, Color } from '../GlobalStyles';
-import AppUser from '../Screens/AppUser';
 
 const AppChoice = ({ navigation, route }) => {
   const { name, dateRegistered } = route.params || {};
@@ -13,13 +12,13 @@ const AppChoice = ({ navigation, route }) => {
       <View style={styles.buttonContainer}>
         <Pressable
           style={[styles.button, styles.startQuizButton]}
-          onPress={() => navigation.navigate('AppStart')}
+          onPress={() => navigation.navigate('AppStart', { name, dateRegistered })}
         >
           <Text style={styles.buttonText}>Start Quiz</Text>
         </Pressable>
         <Pressable
           style={[styles.button, styles.alreadyKnowButton]}
-          onPress={() => navigation.navigate('AppHome', { name, dateRegistered })}
+          onPress={() => navigation.navigate('RecommendationsScreen', { name, dateRegistered })}
         >
           <Text style={styles.buttonText}>Already Know Yours?</Text>
         </Pressable>

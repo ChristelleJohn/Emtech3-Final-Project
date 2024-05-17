@@ -18,7 +18,7 @@ export const Color = {
   colorBlack: "#000",
   colorSlategray: "#606687",
   colorOrange: "#ffa91a",
-  colorMediumaquamarine: "#48d7ac",
+  colorMediumaquamarine: "#A7E6D7",
   colorDarkorange: "#ff7a00",
   colorDeeppink: "#e31c79",
   colorSlateblue: "#7d55c7",

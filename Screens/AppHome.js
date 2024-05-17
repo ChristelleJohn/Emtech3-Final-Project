@@ -4,18 +4,10 @@ import { FontFamily } from "../GlobalStyles";
 import * as Location from 'expo-location';
 import homeIcon from '../Icons/home.png';
 import listIcon from '../Icons/list.png';
-import settingsIcon from '../Icons/settings.png';
-import RecomCongested from "../Screens/RecomCongested";
-import RecomDehydrated from "../Screens/RecomDehydrated";
-import RecomHormonal from "../Screens/RecomHormonal";
-import RecomIrritated from "../Screens/RecomIrritated";
-import RecomReallyGreat from "../Screens/RecomReallyGreat";
-import RecomStressedTired from "../Screens/RecomStressedTired";
-import RecomSuperDry from "../Screens/RecomSuperDry";
+import aboutus from '../Icons/about-us.png';
 
 
-const AppHome = ({ navigation, route }) => {
-  const { name, dateRegistered } = route.params || {};
+const AppHome = ({ navigation}) => {
   StatusBar.setBarStyle('light-content');
   StatusBar.setTranslucent(true);
   StatusBar.setBackgroundColor('transparent');
@@ -115,7 +107,7 @@ const AppHome = ({ navigation, route }) => {
       [
         {
           text: "OK",
-          onPress: () => navigation.navigate("AppStart", { name, dateRegistered })
+          onPress: () => navigation.navigate("AppStart")
         }
       ]
     );
@@ -149,14 +141,14 @@ const AppHome = ({ navigation, route }) => {
         </View>
         
         <View style={styles.navbar2}>
-        <TouchableOpacity style={styles.navbarItem} onPress={() => navigation.navigate('List', { name, dateRegistered })}>
+        <TouchableOpacity style={styles.navbarItem} onPress={() => navigation.navigate('RecommendationsScreen')}>
           <Image source={listIcon} style={styles.icon} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.navbarItem} >
           <Image source={homeIcon} style={styles.icon} />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.navbarItem} onPress={() => navigation.navigate('Settings', { name, dateRegistered })}>
-          <Image source={settingsIcon} style={styles.icon} />
+        <TouchableOpacity style={styles.navbarItem} onPress={() => navigation.navigate('Settings')}>
+          <Image source={aboutus} style={styles.icon} />
         </TouchableOpacity>
       </View>
       </View>

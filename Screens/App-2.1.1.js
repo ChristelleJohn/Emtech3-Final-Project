@@ -14,10 +14,10 @@ const App_2_1_1 = ({ navigation, route }) => {
 
   const handleNextPress = () => {
     if (selectedOption == "yes") {
-      navigation.navigate("FeelingDehydrated", { name, dateRegistered });
+      navigation.navigate("Feeling Dehydrated", { name, dateRegistered });
     }
     if (selectedOption == "no") {
-      navigation.navigate("FeelingSuperDry", { name, dateRegistered });
+      navigation.navigate("Feeling Super Dry", { name, dateRegistered });
     }
   };
 

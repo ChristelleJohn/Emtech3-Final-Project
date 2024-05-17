@@ -1,23 +1,9 @@
-import React from 'react';
-import { StyleSheet, View, Text, ImageBackground, Image } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, View, Text, ImageBackground, Image, Pressable } from 'react-native';
 import { FontFamily, Color, FontSize } from "../GlobalStyles";
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 
-const RecomIrritated = () => {
-  const { name, dateRegistered } = route.params || {};
-  const [modalVisible, setModalVisible] = useState(false);
-
-  const handleContainerPress = () => {
-    setModalVisible(true);
-  };
-
-  const handleCloseModal = () => {
-    setModalVisible(false);
-    // Here you can implement the redirection to the Home Screen
-    // For simplicity, let's log a message instead
-    console.log('Redirecting to Home Screen...');
-  };
-  
+const RecomIrritated = ({ navigation }) => {
   // Define recommendations for Irritated Skin
   const recommendations = [
     { name: 'A gentle, fragrance-free cleanser', description: 'Formulated for sensitive skin to remove impurities without causing further irritation.', image: require('../Icons/cleanser.png') },
@@ -39,44 +25,37 @@ const RecomIrritated = () => {
 
   return (
     <ImageBackground source={require('../Icons/background.jpg')} style={styles.background}>
-      <TouchableOpacity style={styles.container} onPress={handleContainerPress}>
-        <Text style={styles.title}>RECOMMENDED PRODUCTS</Text>
-        <Carousel
-          data={recommendations}
-          renderItem={renderItem}
-          sliderWidth={300}
-          itemWidth={300}
-          loop={false}
-          onSnapToItem={(index) => setActiveSlide(index)}
-        />
-        <Pagination
-          dotsLength={recommendations.length}
-          activeDotIndex={activeSlide}
-          containerStyle={styles.paginationContainer}
-          dotStyle={styles.paginationDot}
-          inactiveDotStyle={styles.inactivePaginationDot}
-          inactiveDotOpacity={0.4}
-          inactiveDotScale={0.6}
-        />
-      </TouchableOpacity>
+      <View style={styles.container}>
+      <Text style={styles.title}>RECOMMENDED PRODUCTS</Text>
+      <Carousel
+        data={recommendations}
+        renderItem={renderItem}
+        sliderWidth={300}
+        itemWidth={300}
+        loop={false}
+        onSnapToItem={(index) => setActiveSlide(index)}
+      />
+      <Pagination
+        dotsLength={recommendations.length}
+        activeDotIndex={activeSlide}
+        containerStyle={styles.paginationContainer}
+        dotStyle={styles.paginationDot}
+        inactiveDotStyle={styles.inactivePaginationDot}
+        inactiveDotOpacity={0.4}
+        inactiveDotScale={0.6}
+      />
+      </View>
 
-      <Modal
-        animationType="slide"
-        transparent={true}
-        visible={modalVisible}
-        onRequestClose={() => {
-          setModalVisible(false);
-        }}
-      >
-        <View style={styles.modalContainer}>
-          <View style={styles.modalContent}>
-            <Text style={styles.modalText}>You will be redirected to the Home Screen</Text>
-            <TouchableOpacity style={styles.okButton} onPress={(handleCloseModal) => navigation.navigate('AppHome', { name, dateRegistered })}>
-              <Text style={styles.okButtonText}>OK</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </Modal>
+      <View style={styles.buttonContainer}>
+        <Pressable
+          style={[styles.button, styles.shadowProp]}
+          onPress={() => navigation.navigate("AppHome")}
+        >
+          <Text style={styles.buttonText}>
+            Home
+          </Text>
+        </Pressable>
+      </View>
     </ImageBackground>
   );
 };
@@ -97,10 +76,10 @@ const styles = StyleSheet.create({
     fontFamily: FontFamily.manualeBold,
   },
   container: {
-    flex: 1,
-    backgroundColor: 'rgba(255, 255, 255, 0.8)', // Semi-transparent background to make text readable
+    flex:20,
+    backgroundColor: 'rgba(255, 255, 255, 0.8)', 
     margin: 20,
-    marginTop: 40,
+    marginTop: 70,
     padding: 20,
     borderRadius: 10,
   },
@@ -130,6 +109,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 10,
     alignSelf: 'center',
+    zIndex: 1, 
   },
   paginationDot: {
     width: 10,
@@ -140,6 +120,33 @@ const styles = StyleSheet.create({
   },
   inactivePaginationDot: {
     backgroundColor: '#888',
+  },
+  buttonContainer: {
+    flex: 3,
+    alignItems: "center",
+    justifyContent: "center",
+    marginHorizontal: 20,
+    marginBottom: 10,
+  },
+  button: {
+    borderRadius: 70,
+    backgroundColor: "#e1705d",
+    width: "100%",
+    paddingHorizontal: 120,
+    paddingVertical: 13,
+  },
+  buttonText: {
+    fontFamily: FontFamily.interBold,
+    fontWeight: "700",
+    fontSize: 18,
+    color: Color.colorWhite,
+    textAlign: 'center'
+  },
+  shadowProp: {
+    shadowColor: '#171717',
+    shadowOffset: {width: -2, height: 10},
+    shadowOpacity: 0.2,
+    shadowRadius: 8,
   },
 });
 

@@ -3,7 +3,6 @@ import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { useFonts } from "expo-font";
 import AppWelcome from "./Screens/AppWelcome";
-import AppUser from "./Screens/AppUser";
 import AppChoice from "./Screens/AppChoice";
 import AppHome from "./Screens/AppHome";
 import AppStart from "./Screens/App-Start";
@@ -37,6 +36,7 @@ import RecomIrritated from "./Screens/RecomIrritated";
 import RecomReallyGreat from "./Screens/RecomReallyGreat";
 import RecomStressedTired from "./Screens/RecomStressedTired";
 import RecomSuperDry from "./Screens/RecomSuperDry";
+import RecommendationsScreen from "./Screens/Recommendations";
 
 
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -64,11 +64,6 @@ const App = () => {
             <Stack.Screen
               name="AppWelcome"
               component={AppWelcome}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="AppUser"
-              component={AppUser}
               options={{ headerShown: false }}
             />
             <Stack.Screen
@@ -162,37 +157,37 @@ const App = () => {
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="FeelingCongested"
+              name="Feeling Congested"
               component={FeelingCongested}
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="FeelingDehydrated"
+              name="Feeling Dehydrated"
               component={FeelingDehydrated}
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="FeelingHormonal"
+              name="Feeling Hormonal"
               component={FeelingHormonal}
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="FeelingIrritated"
+              name="Feeling Irritated"
               component={FeelingIrritated}
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="FeelingReallyGreat"
+              name="Feeling Really Great"
               component={FeelingReallyGreat}
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="FeelingStressed"
+              name="Feeling Stressed and Tired"
               component={FeelingStressed}
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="FeelingSuperDry"
+              name="Feeling Super Dry"
               component={FeelingSuperDry}
               options={{ headerShown: false }}
             />
@@ -229,6 +224,11 @@ const App = () => {
             <Stack.Screen
               name="RecomSuperDry"
               component={RecomSuperDry}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="RecommendationsScreen"
+              component={RecommendationsScreen}
               options={{ headerShown: false }}
             />
             <Stack.Screen

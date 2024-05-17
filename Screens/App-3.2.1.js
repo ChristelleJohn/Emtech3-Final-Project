@@ -13,11 +13,11 @@ const App_3_2_1 = ({ navigation, route }) => {
 
   const handleNextPress = () => {
     if (selectedOption == "yes") {
-      navigation.navigate("FeelingHormonal", { name, dateRegistered });
+      navigation.navigate("Feeling Hormonal", { name, dateRegistered });
     }
 
     if (selectedOption == "no") {
-      navigation.navigate("FeelingCongested", { name, dateRegistered });
+      navigation.navigate("Feeling Congested", { name, dateRegistered });
     }
   };
 

@@ -3,12 +3,13 @@ import { Text, StyleSheet, View, Pressable } from "react-native";
 import { FontFamily, Color, FontSize } from "../GlobalStyles";
 import App_2_1_1 from "../Screens/App-2.1.1";
 import App_2_2_1 from "../Screens/App-2.2.1";
+import RecommendationsScreen from "../Screens/Recommendations";
 
 
 const FeelingSuperDry  = ({ navigation, route }) => {
   const { name, dateRegistered } = route.params || {};
   const handlePress = () => {
-    navigation.navigate("RecomSuperDry");
+    navigation.navigate("RecomSuperDry", { name, dateRegistered });
   };
 
   return (

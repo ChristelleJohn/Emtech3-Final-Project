@@ -13,10 +13,10 @@ const App_3_1_2 = ({ navigation, route }) => {
 
   const handleNextPress = () => {
     if (selectedOption == "yes") {
-      navigation.navigate("FeelingIrritated", { name, dateRegistered });
+      navigation.navigate("Feeling Irritated", { name, dateRegistered });
     }
     if (selectedOption == "no") {
-      navigation.navigate("FeelingStressed", { name, dateRegistered });
+      navigation.navigate("Feeling Stressed and Tired", { name, dateRegistered });
     }
   };
 
