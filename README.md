@@ -13,7 +13,7 @@ The quiz addresses a variety of topics, including skin conditions (such as feeli
 - Skip Quiz: The user will be able to skip the quiz if they already know their skin condition and will be redirected to the List of Skin Conditions Tab.
 - Product Recommendations: Based on quiz responses, users receive tailored product recommendations for enhancing skin condition and skin care solutions.
 
-### 2. - Home Screen with Widgets
+### 2. Home Screen with Widgets
 - List of Skin Conditions Tab: The user can skip the quiz if they already know their skin condition and a list of skin conditions will be presented to choose from which will provide a brief description of the skin condition.
 - Retake Option: Users can retake the quiz at any time to reassess their skin condition for new accurate product recommendations.
 
